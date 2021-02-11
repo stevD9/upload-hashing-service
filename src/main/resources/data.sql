@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS file_hashes;
+
+CREATE TABLE file_hashes (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  hash VARCHAR(250) NOT NULL
+);
