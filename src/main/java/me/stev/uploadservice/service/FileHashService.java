@@ -1,6 +1,6 @@
 package me.stev.uploadservice.service;
 
-import me.stev.uploadservice.FileHashRepository;
+import me.stev.uploadservice.repository.FileHashRepository;
 import me.stev.uploadservice.exception.HashesDoNotMatchException;
 import me.stev.uploadservice.entity.FileHash;
 import org.apache.commons.codec.digest.DigestUtils;

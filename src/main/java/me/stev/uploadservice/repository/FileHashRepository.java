@@ -1,4 +1,4 @@
-package me.stev.uploadservice;
+package me.stev.uploadservice.repository;
 
 import me.stev.uploadservice.entity.FileHash;
 import org.springframework.data.jpa.repository.JpaRepository;
