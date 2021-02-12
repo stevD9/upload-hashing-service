@@ -25,10 +25,13 @@ public class UploadFileController {
     private FileHashService fileHashService;
 
     @PostMapping("/upload")
-    public ResponseEntity<String> upload(@RequestParam("file") MultipartFile file) {
+    public ResponseEntity<String> upload(@RequestParam("file") MultipartFile file,
+                                         @RequestParam("gameId") Integer gameId,
+                                         @RequestParam("drawId") Integer drawId) {
 
         try {
             logger.info("Started uploading file...");
+            logger.info("Got gameId:{}, drawId:{}", gameId, drawId);
             fileStorageService.save(file);
             fileHashService.hashFile(file);
             logger.info("Saved file {} !!", file.getOriginalFilename());
